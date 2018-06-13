@@ -20,7 +20,7 @@ class AddProject extends Component {
   }
   componentDidMount() {
     axios
-      .get(`http://localhost:4000/projects/`, {
+      .get(`https://afternoon-river-43445.herokuapp.com/projects/`, {
         headers: { Authorization: this.auth }
       })
       .then(res => this.setState({ projects: res.data }))
@@ -71,7 +71,7 @@ class AddProject extends Component {
   }
   _del = id => {
     axios
-      .delete(`http://localhost:4000/project/${id}`, {
+      .delete(`https://afternoon-river-43445.herokuapp.com/project/${id}`, {
         headers: { Authorization: this.auth }
       })
       .then(res => {})

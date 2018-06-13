@@ -14,7 +14,7 @@ class ProfileCardList extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:4000/profile/all")
+      .get("https://afternoon-river-43445.herokuapp.com/profile/all")
       .then(res => this.setState({ users: res.data }));
   }
   render() {

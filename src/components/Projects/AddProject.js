@@ -65,9 +65,13 @@ class AddProject extends Component {
     img && (projectFields.img = img);
     url && (projectFields.url = url);
     axios
-      .post("http://localhost:4000/project", projectFields, {
-        headers: { Authorization: this.auth }
-      })
+      .post(
+        "https://afternoon-river-43445.herokuapp.com/project",
+        projectFields,
+        {
+          headers: { Authorization: this.auth }
+        }
+      )
       .then(res => {})
       .then(() => this.props.history.push(`/profile`))
       .catch(err => this.setState({ errors: err.response.data }));

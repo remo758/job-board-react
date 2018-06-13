@@ -17,7 +17,7 @@ class ProjectCardList extends Component {
   componentDidMount() {
     const { userId } = this.props.match.params;
     axios
-      .get(`http://localhost:4000/projects/all/${userId}`)
+      .get(`https://afternoon-river-43445.herokuapp.com/projects/all/${userId}`)
       .then(res => this.setState({ projects: res.data }))
       .catch(err => this.setState({ errors: err.response.data }));
   }

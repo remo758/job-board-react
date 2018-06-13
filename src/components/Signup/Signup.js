@@ -57,7 +57,10 @@ class Signup extends Component {
   _signup = () => {
     const { email, password } = this.state;
     axios
-      .post("http://localhost:4000/signup", { email, password })
+      .post("https://afternoon-river-43445.herokuapp.com/signup", {
+        email,
+        password
+      })
       .then(res => {
         const { token } = res.data;
         localStorage.setItem("AUTH_TOKEN", token);

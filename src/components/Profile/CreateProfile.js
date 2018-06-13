@@ -25,7 +25,7 @@ class CreateProfile extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:4000/profile", {
+      .get("https://afternoon-river-43445.herokuapp.com/profile", {
         headers: { Authorization: this.auth }
       })
       .then(res => {
@@ -207,9 +207,13 @@ class CreateProfile extends Component {
     state && (profileFields.state = state);
     country && (profileFields.country = country);
     axios
-      .post("http://localhost:4000/profile", profileFields, {
-        headers: { Authorization: this.auth }
-      })
+      .post(
+        "https://afternoon-river-43445.herokuapp.com/profile",
+        profileFields,
+        {
+          headers: { Authorization: this.auth }
+        }
+      )
       .then(res => {})
       .then(() => this.props.history.push(`/`))
       .catch(err => this.setState({ errors: err.response.data }));

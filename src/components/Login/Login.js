@@ -59,7 +59,10 @@ class Login extends Component {
   _login = () => {
     const { email, password } = this.state;
     axios
-      .post("http://localhost:4000/login", { email, password })
+      .post("https://afternoon-river-43445.herokuapp.com/login", {
+        email,
+        password
+      })
       .then(res => {
         const { token } = res.data;
         localStorage.setItem("AUTH_TOKEN", token);

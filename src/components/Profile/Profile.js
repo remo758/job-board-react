@@ -17,7 +17,7 @@ class Profile extends Component {
   componentDidMount() {
     const { userId } = this.props.match.params;
     axios
-      .get(`http://localhost:4000/users/${userId}`)
+      .get(`https://afternoon-river-43445.herokuapp.com/users/${userId}`)
       .then(res => this.setState({ profile: res.data }))
       .catch(err => this.setState({ errors: err.response.data }));
   }
