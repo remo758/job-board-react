@@ -31,7 +31,7 @@ class Appbar extends Component {
               className={classes.flex}
             >
               <a className={classes._a} href="/">
-                Job Bord
+                Job Board
               </a>
             </Typography>
             {!this.auth ? (
