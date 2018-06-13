@@ -73,7 +73,7 @@ class AddProject extends Component {
         }
       )
       .then(res => {})
-      .then(() => this.props.history.push(`/profile`))
+      .then(() => this.props.history.push(`/`))
       .catch(err => this.setState({ errors: err.response.data }));
   };
 }
