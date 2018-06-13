@@ -27,7 +27,7 @@ const ProfileCard = ({ classes, user }) => {
             <Typography className={classes.title}>{user.jobTitle}</Typography>
             {user.location && (
               <Typography className={classes.city} gutterBottom>
-                {user.location.city} {user.location.state}{" "}
+                {user.location.city}, {user.location.state},{" "}
                 {user.location.country}
               </Typography>
             )}

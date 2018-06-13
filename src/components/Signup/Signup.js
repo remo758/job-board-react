@@ -65,7 +65,7 @@ class Signup extends Component {
         const { token } = res.data;
         localStorage.setItem("AUTH_TOKEN", token);
       })
-      .then(() => this.props.history.push(`/setting`))
+      .then(() => this.props.history.push(`/profile`))
       .catch(err => this.setState({ errors: err.response.data }));
   };
 }
