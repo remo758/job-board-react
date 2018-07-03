@@ -8,7 +8,8 @@ const styles = {
     right: 0,
     position: "absolute",
     paddingTop: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
+    height: "45%"
   },
   avatar: {
     marginTop: 16,
