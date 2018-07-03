@@ -9,7 +9,7 @@ const styles = {
     position: "absolute",
     paddingTop: 20,
     paddingBottom: 20,
-    height: "45%"
+    height: 350
   },
   avatar: {
     marginTop: 16,
